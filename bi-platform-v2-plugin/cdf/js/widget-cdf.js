@@ -18,7 +18,7 @@ if(document.location.href.indexOf("debug=true") > 0) {
     deps = ["dashboards/oss-module", "dashboards/pentaho-dashboard-controller"];
 }
 
-pen.define("cdf/widget-cdf", deps , 
+define("cdf/widget-cdf", deps ,
 function(ossm, pdc) {
 
 	PentahoCdfComponent = BaseComponent.extend({
@@ -182,9 +182,6 @@ getGUID: function() {
   
 
 	PentahoDashboardController.registerComponentForFileType("xcdf", PentahoCdfComponent);
-    PentahoDashboardController.registerWidgetType(new PentahoCdfComponent());
     	
 });
 
-
-pen.require(["cdf/widget-cdf"], function () {} );
